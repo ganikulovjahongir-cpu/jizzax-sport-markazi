@@ -1,0 +1,151 @@
+
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07162d">
+<title>Jizzax Sport Markazi</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#07162d;color:#f4f8ff;font:16px/1.6 Arial,sans-serif}
+a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;background:#07162dee;border-bottom:1px solid #294565;z-index:5}
+nav{max-width:1100px;margin:auto;padding:15px 22px;display:flex;justify-content:space-between;align-items:center}
+.brand{font-size:20px;font-weight:bold;display:flex;align-items:center;gap:12px}
+.logo{width:48px;height:48px;border:1px solid #68c5ff;border-radius:12px;display:grid;place-items:center;color:#68c5ff}
+nav div:last-child{display:flex;gap:18px;font-size:14px}
+.hero{min-height:570px;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 80% 20%,#205b91,transparent 45%),linear-gradient(130deg,#07162d,#12365b,#07162d)}
+.hero:after{content:"SPORT";position:absolute;right:-20px;bottom:-65px;font-size:180px;font-weight:900;color:#ffffff0a;transform:skew(-15deg)}
+.wrap{max-width:1100px;margin:auto;padding:0 22px;width:100%}
+.eyebrow{color:#68c5ff;font-weight:bold;letter-spacing:3px;font-size:13px}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.08;margin:20px 0}
+.hero p{font-size:18px;color:#d0e1f2;max-width:650px}
+.btn{display:inline-block;padding:13px 22px;background:#48b8ff;color:#07162d;border-radius:10px;font-weight:bold;margin:12px 8px 0 0}
+.btn.secondary{background:transparent;color:white;border:1px solid #8bb8df}
+section{padding:75px 0}
+.alt{background:#0b1e38;border-block:1px solid #ffffff15}
+h2{font-size:38px;margin:10px 0}
+.lead{color:#b5c7dc;max-width:760px}
+.notice{margin-top:25px;padding:16px;border-left:3px solid #48b8ff;background:#102947;border-radius:8px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
+.card{background:linear-gradient(145deg,#153454,#0c213d);border:1px solid #2b4767;border-radius:18px;padding:25px;transition:.2s}
+.card:hover{transform:translateY(-5px);border-color:#58bbff}
+.symbol{font-size:32px;color:#68c5ff}
+.card h3{font-size:22px;margin:12px 0 5px}
+.card p{color:#b5c7dc;font-size:14px}
+.go{display:block;color:#68c5ff;margin-top:15px;font-weight:bold}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:25px}
+.contact{padding:25px;background:#102543;border:1px solid #2b4767;border-radius:16px}
+.contact p{color:#b5c7dc}
+footer{text-align:center;padding:30px;border-top:1px solid #294565;color:#b5c7dc;font-size:13px}
+@media(max-width:700px){.grid{grid-template-columns:repeat(2,1fr)}.contact-grid{grid-template-columns:1fr}nav div:last-child{gap:9px;font-size:12px}.brand{font-size:14px}}
+@media(max-width:450px){.grid{grid-template-columns:1fr}h1{font-size:43px}nav div:last-child a:first-child{display:none}section{padding:55px 0}}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<a class="brand" href="#bosh">
+<span class="logo" id="logo">JSM</span>
+<span>JIZZAX SPORT<br>MARKAZI</span>
+</a>
+<div>
+<a href="#haqida">Markaz haqida</a>
+<a href="#tarmoqlar">Platformalar</a>
+<a href="#aloqa">Bog‘lanish</a>
+</div>
+</nav>
+</header>
+
+<main>
+<div class="hero" id="bosh">
+<div class="wrap">
+<div class="eyebrow">SPORT • IQTIDOR • KELAJAK</div>
+<h1>G‘alabalar sari<br><span style="color:#68c5ff">birgalikda!</span></h1>
+<p>Jizzax Olimpiya va paralimpiya sport turlariga tayyorlash markazi faoliyati, yangiliklari va ijtimoiy sahifalariga yagona kirish nuqtasi.</p>
+<a class="btn" href="#tarmoqlar">Ijtimoiy tarmoqlar ↗</a>
+<a class="btn secondary" href="#aloqa">Bog‘lanish</a>
+</div>
+</div>
+
+<section id="haqida">
+<div class="wrap">
+<div class="eyebrow">BIZ HAQIMIZDA</div>
+<h2>Sport va imkoniyatlar bir makonda</h2>
+<p class="lead">Ushbu mustaqil axborot sahifasi orqali markazning ochiq ijtimoiy kanallari, e’lonlari va yangiliklarini qulay topishingiz mumkin. Olimpiya hamda paralimpiya sporti — intilish, matonat va yutuqlar timsoli.</p>
+<div class="notice">ℹ️ Ushbu sahifa markazning rasmiy veb-sayti emas. Rasmiy ma’lumotlar uchun Sport.uz sahifasidan foydalaning.</div>
+</div>
+</section>
+
+<section class="alt" id="tarmoqlar">
+<div class="wrap">
+<div class="eyebrow">BIZNI KUZATIB BORING</div>
+<h2>Barcha platformalar bir joyda</h2>
+<p class="lead">O‘zingizga qulay platformani tanlang va yangiliklardan xabardor bo‘ling.</p>
+<div class="grid" id="social-grid"></div>
+</div>
+</section>
+
+<section id="aloqa">
+<div class="wrap">
+<div class="eyebrow">ALOQA</div>
+<h2>Biz bilan bog‘laning</h2>
+<p class="lead">Aloqa ma’lumotlari tasdiqlangach, direktor va administrator bilan bog‘lanish tugmalari shu yerga joylashtiriladi.</p>
+<div class="contact-grid">
+<div class="contact">
+<h3>Direktor bilan bog‘lanish</h3>
+<p>Aloqa ma’lumotlari hozircha kiritilmagan.</p>
+</div>
+<div class="contact">
+<h3>Administrator / matbuot xizmati</h3>
+<p>Aloqa ma’lumotlari hozircha kiritilmagan.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>© <span id="year"></span> Jizzax Sport Markazi — mustaqil axborot sahifasi. Rasmiy sayt emas.</footer>
+
+<script>
+const platforms=[
+{name:'Instagram',symbol:'◎',description:'Foto, reels va markaz hayotidan lavhalar',url:'https://www.instagram.com/jizzax_sport_markazi?mdxt=MWVrd2w0MWFpZXZ1aA=='},
+{name:'Telegram',symbol:'➤',description:'Tezkor xabarlar va e’lonlar',url:'https://t.me/Jizzaxsportmarkazi'},
+{name:'WhatsApp',symbol:'◉',description:'WhatsApp kanalimizdagi yangiliklar',url:'https://whatsapp.com/channel/0029Vb9I8ZKHQbS9qyQf7l3q'},
+{name:'Facebook',symbol:'f',description:'Markazning Facebook sahifasi',url:'https://www.facebook.com/share/19rkk2Xogi/'},
+{name:'Sport.uz',symbol:'↗',description:'Markazning Sport.uz dagi sahifasi',url:'https://sport.uz/jizzax_olimpiya_paralimpiya/news'}
+];
+
+const grid=document.getElementById('social-grid');
+
+platforms.forEach(item=>{
+const a=document.createElement('a');
+a.className='card';
+a.href=item.url;
+a.target='_blank';
+a.rel='noopener noreferrer';
+
+const symbol=document.createElement('span');
+symbol.className='symbol';
+symbol.textContent=item.symbol;
+
+const title=document.createElement('h3');
+title.textContent=item.name;
+
+const desc=document.createElement('p');
+desc.textContent=item.description;
+
+const go=document.createElement('span');
+go.className='go';
+go.textContent='Sahifaga o‘tish ↗';
+
+a.append(symbol,title,desc,go);
+grid.append(a);
+});
+
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>

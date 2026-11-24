@@ -11,11 +11,12 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:#07162d;color:#f4f8ff;font:16px/1.6 Arial,sans-serif}
 a{text-decoration:none;color:inherit}
-header{position:sticky;top:0;background:#07162dee;border-bottom:1px solid #294565;z-index:5}
-nav{max-width:1100px;margin:auto;padding:15px 22px;display:flex;justify-content:space-between;align-items:center}
-.brand{font-size:20px;font-weight:bold;display:flex;align-items:center;gap:12px}
-.logo{width:48px;height:48px;border:1px solid #68c5ff;border-radius:12px;display:grid;place-items:center;color:#68c5ff}
-nav div:last-child{display:flex;gap:18px;font-size:14px}
+header{position:sticky;top:0;background:#07162dee;border-bottom:1px solid #294565;z-index:5;backdrop-filter:blur(12px)}
+nav{max-width:1100px;margin:auto;padding:12px 22px;display:flex;justify-content:space-between;align-items:center}
+.brand{font-size:19px;font-weight:bold;display:flex;align-items:center;gap:12px}
+nav .links{display:flex;gap:20px;font-size:14px;align-items:center}
+nav .links a:hover{color:#68c5ff}
+.logo{width:58px;height:58px;object-fit:contain;background:white;border-radius:12px;padding:3px}
 .hero{min-height:570px;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 80% 20%,#205b91,transparent 45%),linear-gradient(130deg,#07162d,#12365b,#07162d)}
 .hero:after{content:"SPORT";position:absolute;right:-20px;bottom:-65px;font-size:180px;font-weight:900;color:#ffffff0a;transform:skew(-15deg)}
 .wrap{max-width:1100px;margin:auto;padding:0 22px;width:100%}
@@ -31,7 +32,7 @@ h2{font-size:38px;margin:10px 0}
 .notice{margin-top:25px;padding:16px;border-left:3px solid #48b8ff;background:#102947;border-radius:8px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
 .card{background:linear-gradient(145deg,#153454,#0c213d);border:1px solid #2b4767;border-radius:18px;padding:25px;transition:.2s}
-.card:hover{transform:translateY(-5px);border-color:#58bbff}
+.card:hover{transform:translateY(-4px);border-color:#58bbff}
 .symbol{font-size:32px;color:#68c5ff}
 .card h3{font-size:22px;margin:12px 0 5px}
 .card p{color:#b5c7dc;font-size:14px}
@@ -39,22 +40,57 @@ h2{font-size:38px;margin:10px 0}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:25px}
 .contact{padding:25px;background:#102543;border:1px solid #2b4767;border-radius:16px}
 .contact p{color:#b5c7dc}
+
+/* RAHBARIYAT */
+.leadership-top{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:35px}
+.person{background:linear-gradient(145deg,#153454,#0c213d);border:1px solid #315274;border-radius:20px;padding:25px;transition:.2s}
+.person:hover{border-color:#68c5ff;transform:translateY(-3px)}
+.person.featured{display:flex;align-items:center;gap:22px}
+.person-photo{width:112px;height:112px;flex-shrink:0;border-radius:18px;background:linear-gradient(145deg,#24577e,#102947);border:1px solid #68c5ff55;display:grid;place-items:center;font-size:34px;font-weight:bold;color:#8bd3ff}
+.person h3{font-size:20px;margin:8px 0}
+.person .role{font-size:13px;color:#68c5ff;font-weight:bold}
+.person .name{font-weight:bold}
+.person .phone{display:inline-flex;align-items:center;gap:8px;margin-top:13px;padding:9px 13px;border-radius:9px;background:#48b8ff;color:#07162d;font-weight:bold;font-size:14px}
+.deputies-title{margin-top:48px}
+.deputies{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:20px}
+.deputy{background:#102543;border:1px solid #2b4767;border-radius:16px;padding:23px}
+.deputy .role{font-size:13px;color:#68c5ff;font-weight:bold}
+.deputy h3{font-size:19px;margin:8px 0}
+.deputy .phone{display:inline-block;color:#68c5ff;font-weight:bold;margin-top:10px}
+.person-photo img{width:100%;height:100%;object-fit:cover;border-radius:17px}
 footer{text-align:center;padding:30px;border-top:1px solid #294565;color:#b5c7dc;font-size:13px}
-@media(max-width:700px){.grid{grid-template-columns:repeat(2,1fr)}.contact-grid{grid-template-columns:1fr}nav div:last-child{gap:9px;font-size:12px}.brand{font-size:14px}}
-@media(max-width:450px){.grid{grid-template-columns:1fr}h1{font-size:43px}nav div:last-child a:first-child{display:none}section{padding:55px 0}}
+
+@media(max-width:700px){
+.grid{grid-template-columns:repeat(2,1fr)}
+.contact-grid,.leadership-top{grid-template-columns:1fr}
+.deputies{grid-template-columns:1fr}
+nav .links{gap:10px;font-size:12px}
+.brand{font-size:14px}
+.person.featured{gap:15px}
+}
+@media(max-width:450px){
+.grid{grid-template-columns:1fr}
+h1{font-size:43px}
+nav .links{gap:8px}
+nav .links a{font-size:11px}
+nav .logo{width:44px;height:44px}
+section{padding:55px 0}
+.person-photo{width:86px;height:86px}
+}
 </style>
 </head>
 <body>
+
 <header>
 <nav>
 <a class="brand" href="#bosh">
-<img src="logo.png.jpg" alt="Jizzax Sport Markazi logotipi" style="width:58px;height:58px;object-fit:contain;background:white;border-radius:12px;padding:3px">
+<img class="logo" src="logo.png.jpg" alt="Jizzax Sport Markazi logotipi">
 <span>JIZZAX SPORT<br>MARKAZI</span>
 </a>
-<div>
+<div class="links">
 <a href="#haqida">Markaz haqida</a>
+<a href="#rahbariyat">Rahbariyat</a>
 <a href="#tarmoqlar">Platformalar</a>
-<a href="#aloqa">Bog‘lanish</a>
 </div>
 </nav>
 </header>
@@ -64,9 +100,9 @@ footer{text-align:center;padding:30px;border-top:1px solid #294565;color:#b5c7dc
 <div class="wrap">
 <div class="eyebrow">SPORT • IQTIDOR • KELAJAK</div>
 <h1>Jizzax sport markazi<br><span style="color:#68c5ff">bir manzilda!</span></h1>
-<p>Ijtimoiy tarmoqlar, aloqa ma’lumotlari va foydali havolalarga yagona kirish nuqtasi.</p>
-<a class="btn" href="#tarmoqlar">Ijtimoiy tarmoqlar ↗</a>
-<a class="btn secondary" href="#aloqa">Bog‘lanish</a>
+<p>Markaz rahbariyati, aloqa ma’lumotlari, ijtimoiy tarmoqlar va foydali havolalarga yagona kirish nuqtasi.</p>
+<a class="btn" href="#rahbariyat">Rahbariyat bilan bog‘lanish</a>
+<a class="btn secondary" href="#tarmoqlar">Ijtimoiy tarmoqlar</a>
 </div>
 </div>
 
@@ -74,16 +110,79 @@ footer{text-align:center;padding:30px;border-top:1px solid #294565;color:#b5c7dc
 <div class="wrap">
 <div class="eyebrow">BIZ HAQIMIZDA</div>
 <h2>Sport va imkoniyatlar bir makonda</h2>
-<p class="lead">Ushbu mustaqil axborot sahifasi orqali markazning ochiq ijtimoiy kanallari, e’lonlari va yangiliklarini qulay topishingiz mumkin. Olimpiya hamda paralimpiya sporti — intilish, matonat va yutuqlar timsoli.</p>
-<div class="notice">ℹ️ Ushbu sahifa markazning rasmiy veb-sayti emas. Rasmiy ma’lumotlar uchun Sport.uz sahifasidan foydalaning.</div>
+<p class="lead">Ushbu mustaqil axborot platformasi markaz haqida ochiq ma’lumotlar, rahbariyat bilan bog‘lanish va ijtimoiy kanallarni qulay topishga yordam beradi.</p>
+<div class="notice">ℹ️ Ushbu platforma markazning rasmiy veb-sayti emas. Rasmiy ma’lumotlar uchun Sport.uz sahifasidan foydalaning.</div>
 </div>
 </section>
 
-<section class="alt" id="tarmoqlar">
+<section class="alt" id="rahbariyat">
+<div class="wrap">
+<div class="eyebrow">MARKAZ BOSHQARUVI</div>
+<h2>Rahbariyat</h2>
+<p class="lead">Kerakli masala bo‘yicha mas’ul rahbarni tanlang va u bilan bog‘laning.</p>
+
+<div class="leadership-top">
+
+<div class="person featured">
+<div class="person-photo">XA</div>
+<div>
+<div class="role">MARKAZ DIREKTORI</div>
+<h3>Xurshid Abduvaliyev Abdulhayitovich</h3>
+<a class="phone" href="tel:+998722265489">☎ +998 72 226-54-89</a>
+</div>
+</div>
+
+<div class="person featured">
+<div class="person-photo">GJ</div>
+<div>
+<div class="role">DIREKTOR MATBUOT KOTIBI</div>
+<h3>Ganikulov Jahongir Nazirqulovich</h3>
+<a class="phone" href="tel:+998904865003">☎ +998 90 486-50-03</a>
+</div>
+</div>
+
+</div>
+
+<div class="deputies-title">
+<div class="eyebrow">MAS’UL YO‘NALISHLAR</div>
+<h2 style="font-size:27px">Direktor o‘rinbosarlari</h2>
+</div>
+
+<div class="deputies">
+
+<div class="deputy">
+<div class="role">SPORT ISHLARI BO‘YICHA</div>
+<h3>Xudoyberdiyev Jo‘rabek Norpo‘latovich</h3>
+<a class="phone" href="tel:+998973288488">☎ +998 97 328-84-88</a>
+</div>
+
+<div class="deputy">
+<div class="role">MA’NAVIY-MA’RIFIY ISHLAR BO‘YICHA</div>
+<h3>Ashraf Umarov Ixtiyorovich</h3>
+<a class="phone" href="tel:+998303093710">☎ +998 30 309-37-10</a>
+</div>
+
+<div class="deputy">
+<div class="role">XO‘JALIK ISHLARI BO‘YICHA</div>
+<h3>Umid Yoldashev Oktamovich</h3>
+<a class="phone" href="tel:+998902967627">☎ +998 90 296-76-27</a>
+</div>
+
+<div class="deputy">
+<div class="role">O‘QUV ISHLARI BO‘YICHA</div>
+<h3>Zafar Avalboyev Abduvohidovich</h3>
+<a class="phone" href="tel:+998902655868">☎ +998 90 265-58-68</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="tarmoqlar">
 <div class="wrap">
 <div class="eyebrow">BIZNI KUZATIB BORING</div>
 <h2>Barcha platformalar bir joyda</h2>
-<p class="lead">O‘zingizga qulay platformani tanlang va yangiliklardan xabardor bo‘ling.</p>
+<p class="lead">O‘zingizga qulay platformani tanlang.</p>
 <div class="grid" id="social-grid"></div>
 </div>
 </section>
@@ -92,34 +191,23 @@ footer{text-align:center;padding:30px;border-top:1px solid #294565;color:#b5c7dc
 <div class="wrap">
 <div class="eyebrow">ALOQA</div>
 <h2>Biz bilan bog‘laning</h2>
-<p class="lead">Aloqa ma’lumotlari tasdiqlangach, direktor va administrator bilan bog‘lanish tugmalari shu yerga joylashtiriladi.</p>
-<div class="contact-grid">
-<div class="contact">
-<h3>Direktor bilan bog‘lanish</h3>
-<p>Aloqa ma’lumotlari hozircha kiritilmagan.</p>
-</div>
-<div class="contact">
-<h3>Administrator / matbuot xizmati</h3>
-<p>Aloqa ma’lumotlari hozircha kiritilmagan.</p>
-</div>
-</div>
+<p class="lead">Kerakli masala bo‘yicha rahbariyat a’zolarining yuqoridagi aloqa ma’lumotlaridan foydalanishingiz mumkin.</p>
 </div>
 </section>
 </main>
 
-<footer>© <span id="year"></span> Jizzax Sport Markazi — mustaqil axborot sahifasi. Rasmiy sayt emas.</footer>
+<footer>© <span id="year"></span> Jizzax Sport Markazi — mustaqil axborot platformasi. Rasmiy sayt emas.</footer>
 
 <script>
 const platforms=[
 {name:'Instagram',symbol:'◎',description:'Foto, reels va markaz hayotidan lavhalar',url:'https://www.instagram.com/jizzax_sport_markazi?mdxt=MWVrd2w0MWFpZXZ1aA=='},
 {name:'Telegram',symbol:'➤',description:'Tezkor xabarlar va e’lonlar',url:'https://t.me/Jizzaxsportmarkazi'},
-{name:'WhatsApp',symbol:'◉',description:'WhatsApp kanalimizdagi yangiliklar',url:'https://whatsapp.com/channel/0029Vb9I8ZKHQbS9qyQf7l3q'},
+{name:'WhatsApp',symbol:'◉',description:'WhatsApp kanalimiz',url:'https://whatsapp.com/channel/0029Vb9I8ZKHQbS9qyQf7l3q'},
 {name:'Facebook',symbol:'f',description:'Markazning Facebook sahifasi',url:'https://www.facebook.com/share/19rkk2Xogi/'},
 {name:'Sport.uz',symbol:'↗',description:'Markazning Sport.uz dagi sahifasi',url:'https://sport.uz/jizzax_olimpiya_paralimpiya/news'}
 ];
 
 const grid=document.getElementById('social-grid');
-
 platforms.forEach(item=>{
 const a=document.createElement('a');
 a.className='card';
